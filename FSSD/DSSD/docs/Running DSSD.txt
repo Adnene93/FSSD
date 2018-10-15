@@ -1,0 +1,99 @@
+
+		*** DSSD -- Diverse Subgroup Set Discovery ***
+
+ :-: Setting up :-:
+
+Now that you've downloaded these binaries of the DSSD implementation,
+getting up to speed should be easy. That is, provided that your system
+meets some basic criteria.
+
+First of all, you need a Windows machine. Second, you will to have the
+Visual Studio 2010 SP1 redistributable package installed. I provide
+both 32-bits (x86) and 64-bits (x64) binaries, the appropriate
+redistributable packages can be downloaded from
+
+x86: http://www.microsoft.com/en-us/download/details.aspx?id=8328
+x64: http://www.microsoft.com/en-us/download/details.aspx?id=13523
+
+Unpack all files in the DSSD zip file to a directory on your hard drive,
+ensuring to maintain the directory structure that is present within the
+zip file.
+
+
+ :-: Configuring DSSD :-:
+ 
+In dssd/bin, you will find the binaries and configuration files (which
+all have the extension .conf).
+
+* Use emc.user.conf to set the maximum amount of memory that the program
+is allowed to use. Note that this is mainly used by Krimp when generating
+candidates -- if DSSD needs memory, it needs memory. Some of DSSD's 
+directives allow for influencing memory usage though.
+
+* dssd.exe is 32-bits, dssd64.exe is the 64-bit version. DSSD can be run 
+in two ways:
+	1) Specify the config filename in emc.conf and simply launch `dssd'
+	2) Type `dssd <configname>', eg `dssd dssd-creditg'
+ 
+ 
+ :-: Data, data, data :-:
+
+Each dataset should be in 
+	dssd/data/<dsName>/<dsName>.arff
+Unsurprisingly, it should be in ... ARFF format, originating from Weka.
+Additionally, a second file should be present, ie
+	dssd/data/<dsName>/<dsName>.emm
+which defines which attributes should be used as description attributes
+and which as model attributes. One of the two can directives can be set
+to *, meaning that the remainder of attributes is assigned to that part
+of the space.
+With this package, I provide two example datasets: CreditG for single-target
+classical subgroup discovery and Emotions for multi-target exceptional
+model mining. See these two working examples for further hints.
+
+ 
+ :-: Performing Diverse Subgroup Set Discovery :-:
+ 
+dssd-creditg.conf and dssd-emotions.conf provide example configurations 
+for running DSSD on CreditG and Emotions respectively. The files provide
+some additional hints on usage, and the two papers that describe DSSD
+could also help out:
+
+1] van Leeuwen, M. & Knobbe, A.J. Non-Redundant Subgroup Discovery in Large 
+and Complex Data. In: Proceedings of the European Conference on Machine 
+Learning and Principles and Practices of Knowledge Discovery in Data 2011
+(ECML PKDD'11), 2011.
+2] van Leeuwen, M. & Knobbe, A.J. Diverse Subgroup Set Discovery. 
+In: Data Mining and Knowledge Discovery, 2012. (To appear)
+
+After DSSD finished, all results are available in 
+	dssd/xps/dssd/<dsName>-<timestamp>/
+Such directories can contain up to 3 pairs of results/stats-files:
+	results1-<timestamp>.sg / stats1-<timestamp.csv
+contains subgroup descriptions and statistics after DSSD phase 1,
+and similarly for results2/stats2 and results3/stats3.
+(When one of the three phases is disabled, its corresponding files are
+also missing.)
+
+  
+ :-: Evaluating individual subgroups :-:
+
+The binaries can also be used to evaluate subgroup individually, one by
+one or many at a time. For this purpose, evaluatesg.conf is provided.
+This could be useful, for example, when you have obtained subgroups 
+using one quality measure and would like to compute their qualities
+using a different quality measure.
+
+
+ :-: That's all folks :-:
+
+That's all, at least for now. Should you run into problems or have any 
+other questions with regard to DSSD, you may contact me at
+
+	matthijs.vanleeuwen@cs.kuleuven.be
+	
+Would you like to have functionality that is not in this release, such
+as other quality measures, consider downloading the open source package
+containing all source code. More information about this on
+
+	www.patternsthatmatter.org/dssd/

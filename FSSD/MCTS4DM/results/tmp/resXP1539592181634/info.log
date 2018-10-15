@@ -1,0 +1,28 @@
+=== Parameters ===
+QualitiesFiles : datasets/tmp/qualities.csv
+PropertiesFiles : datasets/tmp/properties.csv
+attrType : NUMERIC
+resFolder : tmp
+minSupp : 1
+nbLoops : 50000
+maxOutput : 5
+maxRedundancy : 0.25
+maxLength : 2147483647
+measure : WRAcc
+UCB : UCBSP
+refineExpand : TunedGenerator
+duplicatesExpand : AMAF
+pathLength : -1
+refineRollOut : Large
+jumpingLarge : 10
+rewardPolicy : MaxPath
+memoryPolicy : TopK
+topKMemory : 1
+updatePolicy : Max
+
+=== Result Information ===
+date : 15/10/2018 10:29
+runtime(ms) : 47
+nbPatterns : 5
+measures : 0.21 0.06 0.04 0.04 0.04
+descriptionLength : 1 1 1 1 1

@@ -1,0 +1,3 @@
+method	dataset	attributes	types	nb_attributes	class_attribute	wanted_label	alpha	top_k	nb_patterns_top	support_size	support_size_ratio	tpr	fpr	quality	nb_patterns	timespent	memory
+fssd	iris	['b']	['numeric']	1	class	Iris-versicolor	0.3333333333333333	3	1	54	0.36	0.98	0.05	0.20666666666666667	8	0.0020513534545898438	0
+groundtruth	iris	['b']	['numeric']	1	class	Iris-versicolor	0.3333333333333333	3	1	54	0.36	0.98	0.05	0.20666666666666667	45	0.07792830467224121	0

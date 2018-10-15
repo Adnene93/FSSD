@@ -1,0 +1,21 @@
+method	dataset	attributes	types	nb_attributes	depthmax	class_attribute	wanted_label	alpha	top_k	nb_patterns_top	support_size	support_size_ratio	tpr	fpr	quality	timespent
+fssd	iris	['b']	['numeric']	1.0	8.0	class	Iris-versicolor	0.3333333333333333	5.0	1.0	54.0	0.36	0.98	0.05	0.20666666666666667	0.0017049312591552734
+BSD	iris	['b']	['numeric']	1.0	8.0	class	Iris-versicolor	0.3333333333333333	5.0	2.0	56.0	0.37333333333333335	0.8	0.16	0.14222222222222222	0.010432243347167969
+DSSD	iris	['b']	['numeric']	1.0	8.0	class	Iris-versicolor	0.3333333333333333	5.0	5.0	68.0	0.4533333333333333	1.0	0.18	0.18222222222222226	0.48693323135375977
+fssd	iris	['b', 'd']	['numeric', 'numeric']	2.0	8.0	class	Iris-versicolor	0.3333333333333333	5.0	1.0	54.0	0.36	0.98	0.05	0.20666666666666667	0.004868507385253906
+BSD	iris	['b', 'd']	['numeric', 'numeric']	2.0	8.0	class	Iris-versicolor	0.3333333333333333	5.0	5.0	63.0	0.42	0.8	0.23	0.12666666666666668	0.02114105224609375
+DSSD	iris	['b', 'd']	['numeric', 'numeric']	2.0	8.0	class	Iris-versicolor	0.3333333333333333	5.0	5.0	54.0	0.36	0.98	0.05	0.20666666666666667	0.5173563957214355
+fssd	iris	['b', 'd', 'c']	['numeric', 'numeric', 'numeric']	3.0	8.0	class	Iris-versicolor	0.3333333333333333	5.0	2.0	55.0	0.36666666666666664	1.0	0.05	0.2111111111111111	0.009382963180541992
+BSD	iris	['b', 'd', 'c']	['numeric', 'numeric', 'numeric']	3.0	8.0	class	Iris-versicolor	0.3333333333333333	5.0	5.0	72.0	0.48	0.88	0.28	0.13333333333333333	0.03643012046813965
+DSSD	iris	['b', 'd', 'c']	['numeric', 'numeric', 'numeric']	3.0	8.0	class	Iris-versicolor	0.3333333333333333	5.0	5.0	56.0	0.37333333333333335	0.98	0.07	0.20222222222222222	0.5766201019287109
+fssd	iris	['b', 'd', 'c', 'a']	['numeric', 'numeric', 'numeric', 'numeric']	4.0	8.0	class	Iris-versicolor	0.3333333333333333	5.0	3.0	51.0	0.34	1.0	0.01	0.22	0.013895034790039062
+BSD	iris	['b', 'd', 'c', 'a']	['numeric', 'numeric', 'numeric', 'numeric']	4.0	8.0	class	Iris-versicolor	0.3333333333333333	5.0	5.0	38.0	0.25333333333333335	0.72	0.02	0.15555555555555556	0.05283761024475098
+DSSD	iris	['b', 'd', 'c', 'a']	['numeric', 'numeric', 'numeric', 'numeric']	4.0	8.0	class	Iris-versicolor	0.3333333333333333	5.0	5.0	61.0	0.4066666666666667	1.0	0.11	0.1977777777777778	0.6044096946716309
+MCTS4DM	iris	['b']	['numeric']	1.0	8	class	Iris-versicolor	0.3333333333333333	5.0	5.0	63.0	0.42	0.96	0.15	0.18	0.12664127349853516
+MCTS4DM	iris	['b', 'd']	['numeric', 'numeric']	2.0	8	class	Iris-versicolor	0.3333333333333333	5.0	5.0	62.0	0.41333333333333333	0.96	0.13	0.18444444444444444	0.6881797313690186
+MCTS4DM	iris	['b', 'd', 'c']	['numeric', 'numeric', 'numeric']	3.0	8	class	Iris-versicolor	0.3333333333333333	5.0	5.0	56.0	0.37333333333333335	0.98	0.06	0.20444444444444446	4.58977746963501
+MCTS4DM	iris	['b', 'd', 'c', 'a']	['numeric', 'numeric', 'numeric', 'numeric']	4.0	8	class	Iris-versicolor	0.3333333333333333	5.0	5.0	54.0	0.36	0.98	0.05	0.20666666666666667	2.636735439300537
+CN2SD	iris	['b']	['numeric']	1.0	-1.0	class	Iris-versicolor	0.3333333333333333	5.0	3.0	48.0	0.3157894736842105	0.9	0.03	0.19333333333333336	0.18000006675720215
+CN2SD	iris	['b', 'd']	['numeric', 'numeric']	2.0	-1.0	class	Iris-versicolor	0.3333333333333333	5.0	5.0	44.0	0.2894736842105263	0.86	0.01	0.18888888888888888	0.7239999771118164
+CN2SD	iris	['b', 'd', 'c']	['numeric', 'numeric', 'numeric']	3.0	-1.0	class	Iris-versicolor	0.3333333333333333	5.0	3.0	150.0	0.9868421052631579	1.0	1.0	0.0	1.1119999885559082
+CN2SD	iris	['b', 'd', 'c', 'a']	['numeric', 'numeric', 'numeric', 'numeric']	4.0	-1.0	class	Iris-versicolor	0.3333333333333333	5.0	2.0	44.0	0.2894736842105263	0.88	0.0	0.19555555555555557	1.2870001792907715

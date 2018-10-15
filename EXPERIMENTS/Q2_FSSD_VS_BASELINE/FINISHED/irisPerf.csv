@@ -1,0 +1,9 @@
+method	dataset	attributes	types	nb_attributes	class_attribute	wanted_label	alpha	top_k	nb_patterns_top	support_size	support_size_ratio	tpr	fpr	quality	nb_patterns	timespent	memory	finished
+fssd	iris	['b']	['numeric']	1	class	Iris-versicolor	0.3333333333333333	5	1	54	0.36	0.98	0.05	0.20666666666666667	8	0.0	0	True
+naive	iris	['b']	['numeric']	1	class	Iris-versicolor	0.3333333333333333	5	1	54	0.36	0.98	0.05	0.20666666666666667	45	0.005000114440917969	0	True
+fssd	iris	['b', 'd']	['numeric', 'numeric']	2	class	Iris-versicolor	0.3333333333333333	5	2	56	0.37333333333333335	1.0	0.06	0.2088888888888889	30	0.006999969482421875	0	True
+naive	iris	['b', 'd']	['numeric', 'numeric']	2	class	Iris-versicolor	0.3333333333333333	5	2	56	0.37333333333333335	1.0	0.06	0.2088888888888889	1144	0.09499979019165039	0	True
+fssd	iris	['b', 'd', 'c']	['numeric', 'numeric', 'numeric']	3	class	Iris-versicolor	0.3333333333333333	5	2	54	0.36	1.0	0.04	0.21333333333333335	48	0.009999752044677734	0	True
+naive	iris	['b', 'd', 'c']	['numeric', 'numeric', 'numeric']	3	class	Iris-versicolor	0.3333333333333333	5	2	54	0.36	1.0	0.04	0.21333333333333335	23264	1.8410003185272217	0	True
+fssd	iris	['b', 'd', 'c', 'a']	['numeric', 'numeric', 'numeric', 'numeric']	4	class	Iris-versicolor	0.3333333333333333	5	2	53	0.35333333333333333	1.0	0.03	0.21555555555555556	100	0.015000104904174805	0	True
+naive	iris	['b', 'd', 'c', 'a']	['numeric', 'numeric', 'numeric', 'numeric']	4	class	Iris-versicolor	0.3333333333333333	5	2	53	0.35333333333333333	1.0	0.03	0.21555555555555556	152865	15.647000074386597	0	True

@@ -1,0 +1,9 @@
+method	dataset	attributes	types	nb_attributes	class_attribute	wanted_label	alpha	top_k	nb_patterns_top	support_size	support_size_ratio	tpr	fpr	quality	nb_patterns	timespent	memory	finished
+fssd	balance	['c']	['numeric']	1	class	B	0.0784	5	2	375	0.6	0.6326530612244898	0.5972222222222222	0.0025600000000000037	24	0.004999876022338867	0	True
+naive	balance	['c']	['numeric']	1	class	B	0.0784	5	2	375	0.6	0.6326530612244898	0.5972222222222222	0.0025600000000000037	15	0.004999876022338867	0	True
+fssd	balance	['c', 'd']	['numeric', 'numeric']	2	class	B	0.0784	5	5	500	0.8	0.8775510204081632	0.7934027777777778	0.006079999999999998	448	0.0409998893737793	0	True
+naive	balance	['c', 'd']	['numeric', 'numeric']	2	class	B	0.0784	5	5	500	0.8	0.8775510204081632	0.7934027777777778	0.006079999999999998	225	0.056999921798706055	0	True
+fssd	balance	['c', 'd', 'b']	['numeric', 'numeric', 'numeric']	3	class	B	0.0784	5	5	385	0.616	0.8979591836734694	0.5920138888888888	0.022105600000000003	1565	0.1400001049041748	0	True
+naive	balance	['c', 'd', 'b']	['numeric', 'numeric', 'numeric']	3	class	B	0.0784	5	5	385	0.616	0.8979591836734694	0.5920138888888888	0.022105600000000003	1434	0.26000022888183594	0	True
+fssd	balance	['c', 'd', 'b', 'a']	['numeric', 'numeric', 'numeric', 'numeric']	4	class	B	0.0784	5	5	333	0.5328	0.9591836734693877	0.4965277777777778	0.033428479999999997	2719	0.27700018882751465	0	True
+naive	balance	['c', 'd', 'b', 'a']	['numeric', 'numeric', 'numeric', 'numeric']	4	class	B	0.0784	5	5	333	0.5328	0.9591836734693877	0.4965277777777778	0.033428479999999997	4039	0.746999979019165	0	True

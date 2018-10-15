@@ -1,0 +1,44 @@
+
+** Reading dataset ... tmp
+
+** Finished reading data. Starting search.
+Max time:		0
+Search type:		beam
+Min coverage:		1
+Max depth:		8
+Float # splits:		5
+Top-k:			10000
+Using OE:		no
+Measure:		WRAcc (numeric)
+Beam type:		cover
+Max beam width:		5
+Variable beam width:	no
+Weight strategy:	multiplicative weighted covering
+Weight multiplier:	0.900
+Included 5 subgroups in beam.
+Included 5 subgroups in beam.
+Included 5 subgroups in beam.
+Included 5 subgroups in beam.
+Included 5 subgroups in beam.
+Included 5 subgroups in beam.
+Included 5 subgroups in beam.
+** Finished search.
+
+Saved subgroups and their stats.
+Applying post-processor:	dominance
+Applying post-processor:	qualitysort
+Saved subgroups and their stats.
+
+ * Performing subgroup selection on current results set using beam selector.
+Saved subgroups and their stats.
+
+** Search results
+# candidates:	360
+# subgroups:	5
+Min quality:	0.00096
+Max quality:	0.00224
+
+Saved subsets belonging to subgroups.
+
+Task `diverse`, command `dssd` finished. This took 1 seconds.
+

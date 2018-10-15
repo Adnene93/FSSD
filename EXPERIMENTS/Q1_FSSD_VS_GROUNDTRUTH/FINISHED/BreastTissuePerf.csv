@@ -1,0 +1,3 @@
+method	dataset	attributes	types	nb_attributes	class_attribute	wanted_label	alpha	top_k	nb_patterns_top	support_size	support_size_ratio	tpr	fpr	quality	nb_patterns	timespent	memory
+fssd	BreastTissue	['I0']	['numeric']	1	Class	car	0.19811320754716982	3	1	39	0.36792452830188677	1.0	0.21176470588235294	0.12522249911000355	19	0.0046999454498291016	0
+groundtruth	BreastTissue	['I0']	['numeric']	1	Class	car	0.19811320754716982	3	3	32	0.3018867924528302	1.0	0.12941176470588237	0.13830544677821288	210	5.383400201797485	0

@@ -1,0 +1,5 @@
+method	dataset	attributes	types	nb_attributes	class_attribute	wanted_label	alpha	top_k	nb_patterns_top	support_size	support_size_ratio	tpr	fpr	quality	nb_patterns	timespent	memory
+fssd	balance	['c']	['numeric']	1	class	B	0.0784	3	2	375	0.6	0.6326530612244898	0.5972222222222222	0.0025600000000000037	24	0.005191326141357422	0
+groundtruth	balance	['c']	['numeric']	1	class	B	0.0784	3	2	375	0.6	0.6326530612244898	0.5972222222222222	0.0025600000000000037	15	0.020571231842041016	0
+fssd	balance	['c', 'd']	['numeric', 'numeric']	2	class	B	0.0784	3	3	425	0.68	0.7551020408163265	0.6736111111111112	0.005887999999999993	394	0.030379533767700195	0
+groundtruth	balance	['c', 'd']	['numeric', 'numeric']	2	class	B	0.0784	3	3	425	0.68	0.7551020408163265	0.6736111111111112	0.005887999999999993	225	37.81617975234985	0
