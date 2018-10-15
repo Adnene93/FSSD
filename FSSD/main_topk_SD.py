@@ -1411,6 +1411,7 @@ if __name__ == '__main__':
 		parser.add_argument('--COMPLEX_CATEGORICAL',action='store_true',help='consider the power set for categorical attribute as a flat tree instead of one single value')
 
 		parser.add_argument('--Q2',action='store_true',help='compare the performances of naive and fssd')
+		parser.add_argument('--Q1',action='store_true',help='compare the performances of naive and fssd')
 		parser.add_argument('--memory_profile',action='store_true',help='profile also the memory')
 		parser.add_argument('--Q2MEMORYPROFILER',action='store_true',help='compare the performances of naive and fssd')
 		parser.add_argument('--results_perf',metavar='results_perf',type=str,help='results of performance',default='performances.csv')
@@ -1753,7 +1754,7 @@ if __name__ == '__main__':
 			writeCSVwithHeader(top_k_returned,results_file,selectedHeader=header_returned,delimiter='\t',flagWriteHeader=True)
 		#raw_input('.........................')
 
-		if args.Q2:
+		if args.Q2 or args.Q1:
 			
 			file=args.file
 			delimiter=args.delimiter
