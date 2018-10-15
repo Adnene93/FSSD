@@ -162,7 +162,7 @@ Example of returned pattern by the above script: (last line depict the quality o
   &nbsp;
   
 ### Corresponding Authors
-For additional informations please contact us: BELFODIL Adnene `adnene.belfodil@gmail.com`, BELFODIL Aimene `aimene.belfodil@gmail.com`
+For additional informations please contact us: BELFODIL Adnene `adnene.belfodil@gmail.com`, BELFODIL Aimene `aimene.belfodil@gmail.com`, BENDIMERAD Anes `ahmed-anes.bendimerad@insa-lyon.fr`
 
 
 
