@@ -113,8 +113,46 @@ The directory Q3_FSSD_VS_STATEOFART contains the experiments used to compare fss
 
   &nbsp;
   
- #### 3.4. __USE_ALGO__: ----
-  
+ #### 3.4. __USE_ALGO__: 
+ 
+This command makes it possible to use FSSD to producte the desired subgroup-set over a choosen dataset. a CSV file  an end-user can evaluate the subgroups and study the set of subgroups that discrimnate the studied class. 
+
+```
+py ../FSSD/main_topk_SD.py --USE_ALGO --file <DATASET> --delimiter <DELIMITER> --class_attribute <CLASS_ATTRIBUTE> --wanted_label <WANTED_LABEL> --results_perf <DESTINATION_FILE> --offset 0 --nb_attributes <NB_ATTRS> --top_k <TOPK> --method <METHOD> --First_Launching --timebudget <TIMEBUDGET> --depthmax <DEPTHMAX> --results_file <RESULTS_FILE>
+```
+
+With:
+
+* ```<DATASET>```: the dataset input file.
+* ```<DELIMITER>```: the CSV file delimiter (defualt \t).
+* ```<CLASS_ATTRIBUTE>```: the attribute (column) conveying the studied class.
+* ```<WANTED_LABEL>```: the label that we want to descriminate using the descriptive attributes.
+* ```<RESULTS_FILE>```: The results file containing the returned patterns. 
+* ```<NB_ATTRS>```: the number of attributes to consider.
+* ```<TOPK>```: the number of subgroups that the method should return. Note the method can return less than K subgroups if no remaining subgroups, using the proposed greedy scheme,  contribute  positively to the current set of TOP subgroups.
+* ```<METHOD>```: the method to consider to mine for top-k subgroup set: (fssd | naive | DSSD | MCTS4DM | CN2SD | BSD)
+* ```<TIMEBUDGET>```: the maximum timebudget given to the algorithm, after which the execution of the selected method is interrupted and the currently found patterns are returned.
+* ```<DEPTHMAX>```: Maximum depth for the search (ie the maximum number of conditions in a subgroup description) only works for BSD, fssd, DSSD and CN2SD.
+
+
+ An example of the command is given below with the produced results:
+
+```
+py ../FSSD/main_topk_SD.py --USE_ALGO --file ../FSSD/PreparedDatasets/habermanQualitative.csv --delimiter , --class_attribute survival --wanted_label 2 --nb_attributes 2 --top_k 5 --method fssd --results_file ./USE_ALGO/HabemannQualitative.csv
+```
+
+Example of returned pattern by the above script: (last line depict the quality of the subgroup set as a whole where the quality is the WRAcc of the union of the found subgroups)
+
+
+| id_pattern  | attributes                | pattern                      | support_size | support_size_ratio | quality | quality_gain | tpr     | fpr     | nb_patterns | timespent |
+|-------------|---------------------------|------------------------------|--------------|--------------------|---------|--------------|---------|---------|-------------|-----------|
+| 0           | ['age', 'operation_year'] | [[43.0, 83.0], [58.0, 65.0]] | 179          | 0.58               | 0.04123 | 0.04123      | 0.74074 | 0.52889 | 9859        | 0.74      |
+| 1           | ['age', 'operation_year'] | [[34.0, 46.0], [66.0, 69.0]] | 20           | 0.07               | 0.00884 | 0.00884      | 0.09877 | 0.05333 | 610         | 0.78      |
+| 2           | ['age', 'operation_year'] | [[54.0, 61.0], [68.0, 68.0]] | 4            | 0.01               | 0.00634 | 0.00634      | 0.03704 | 0.00444 | 189         | 0.79      |
+| 3           | ['age', 'operation_year'] | [[41.0, 41.0], [60.0, 64.0]] | 3            | 0.01               | 0.00394 | 0.00394      | 0.02469 | 0.00444 | 100         | 0.79      |
+| 4           | ['age', 'operation_year'] | [[52.0, 52.0], [66.0, 69.0]] | 4            | 0.01               | 0.00308 | 0.00308      | 0.02469 | 0.00889 | 55          | 0.8       |
+| SubgroupSet | ['age', 'operation_year'] | -                            | 210          | 0.69               | 0.06344 | 0.06344      | 0.92593 | 0.6     | 10813       | 0.8       |
+
   &nbsp;
   &nbsp;
   

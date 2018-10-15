@@ -1750,7 +1750,13 @@ if __name__ == '__main__':
 				pr.disable()
 				ps = pstats.Stats(pr)
 				ps.sort_stats('cumulative').print_stats(20) #time
-
+			for row in top_k_returned:
+				for key in row:
+					if type(row[key]) is float:
+						if key in {'quality','quality_gain','tpr','fpr'}:
+							row[key]='%.5f' % row[key]
+						else:
+							row[key]='%.2f' % row[key]
 			writeCSVwithHeader(top_k_returned,results_file,selectedHeader=header_returned,delimiter='\t',flagWriteHeader=True)
 		#raw_input('.........................')
 
