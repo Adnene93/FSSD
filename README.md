@@ -3,7 +3,7 @@
 
 This repository contains the materials concerning the paper : A Fast and Efficient Algorithm for Subgroup Set Discovery, it contains:
 1. **FSSD** : The project code.
-2. **EXPERIMENTS**: a collection of additional experiments files used to generate the plot figures in the submitted paper - under SDM'18 Review -  as well as the set of scripts.
+2. **EXPERIMENTS**: a collection of additional experiments files used to generate the plot figures in the submitted paper - accepted in DSAA' 2019 -  as well as the set of scripts.
 
 
 &nbsp;
